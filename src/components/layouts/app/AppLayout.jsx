@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import { useDocumentTitle } from '@/hooks'
-import Navbar from './Navbar'
+
 import Footer from '../footer/Footer'
+import Navbar from './Navbar'
 
 const AppLayout = () => {
   useDocumentTitle('My App')
@@ -9,11 +10,7 @@ const AppLayout = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto">
-        <main className="w-full py-5">
-          <Outlet />
-        </main>
-      </div>
+      <Outlet />
       <Footer />
     </>
   )

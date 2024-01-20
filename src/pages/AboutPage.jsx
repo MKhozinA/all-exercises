@@ -1,24 +1,26 @@
-import { useDocumentTitle } from '@/hooks'
+/* eslint-disable react/no-unescaped-entities */
+import { useDocumentTitle } from "@/hooks";
 
 const AboutPage = () => {
-  useDocumentTitle('About')
+  useDocumentTitle("About");
 
   return (
     <div className="bg-slate-200 max-w-2xl mx-auto my-4 p-4 rounded">
       <h1 className="text-xl mb-2 font-semibold">About Page</h1>
 
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quam culpa delectus ea rem vel a
-        molestiae adipisci voluptatibus commodi quia, facere soluta reprehenderit veritatis ipsa perferendis!
-        Provident assumenda sint eius incidunt nobis quibusdam enim officiis? Asperiores aperiam a dolores
-        facilis numquam repellat voluptas corrupti tempore ullam. Culpa, quibusdam corporis molestias quae,
-        repellendus, tempora modi autem placeat praesentium quas ut quod quis eveniet. Error est odit ut
-        possimus. Modi explicabo expedita nostrum, quas quibusdam nisi consectetur eos fugit porro itaque iste
-        dolor magni quasi odit numquam facilis enim ex incidunt minima aperiam ullam. Numquam repellat debitis
-        recusandae non, id illo.
+        Welcome to this website, where you'll find a compilation of all the
+        exercises I've undertaken to master the fundamentals of programming.
+        Here, I document a diverse range of projects and exercises, showcasing
+        my journey in implementing foundational programming concepts. From
+        simple calculators and color gradients to interactive to-do lists and
+        more, this platform serves as a testament to my commitment to continuous
+        learning and practical application of coding principles. Join me on this
+        coding adventure as I explore and implement various programming
+        challenges, refining my skills and sharing the process with you.
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

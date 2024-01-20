@@ -6,6 +6,7 @@ const Navigation = () => {
     { name: 'Home', path: '/'},
     { name: 'About', path: '/about'},
     { name: 'Contact', path: '/contact'},
+    { name: 'Calculator', path: '/calculator'},
   ]
   return (
     <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
