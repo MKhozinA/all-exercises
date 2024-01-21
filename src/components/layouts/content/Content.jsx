@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import img1 from './img1.png'
+import { Link } from "react-router-dom";
+import img1 from "./img1.png";
+import img2 from "./img2.png";
 const Konten = () => {
-
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div className="max-w-2xl mb-10">
@@ -14,35 +14,33 @@ const Konten = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-          <Link
-            className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            to="/calculator"
-          >
-            <div className="aspect-w-16 aspect-h-9">
-              <img
-                className="w-full object-cover rounded-xl"
-                src={img1}
-                alt="Image Description"
-              />
-            </div>
-            <h3 className="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
-              Simple Calculator
-            </h3>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              January 20, 2024
-            </p>
-          </Link>
-       
-
-        <a
+        <Link
           className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
+          to="/calculator"
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
               className="w-full object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3465&q=80"
+              src={img1}
+              alt="Image Description"
+            />
+          </div>
+          <h3 className="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+            Simple Calculator
+          </h3>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            January 20, 2024
+          </p>
+        </Link>
+
+        <Link
+          className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+          to="/colorgradient"
+        >
+          <div className="aspect-w-16 aspect-h-9">
+            <img
+              className="w-full object-cover rounded-xl"
+              src={img2}
               alt="Image Description"
             />
           </div>
@@ -50,9 +48,9 @@ const Konten = () => {
             Color Gradient
           </h3>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            January 15, 2024
+            January 21, 2024
           </p>
-        </a>
+        </Link>
 
         <a
           className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"

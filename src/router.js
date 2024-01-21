@@ -12,6 +12,7 @@ import UsersIndex from "./pages/admin/users/UsersIndex";
 import Login from "./pages/Login";
 import DetailBookPage from "./pages/admin/books/BookDetailsPage";
 import Calculator from "./calculator";
+import ColorBox from "./colorGradient";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "calculator",
         Component: Calculator,
+      },
+      {
+        path: "colorgradient",
+        Component: ColorBox,
       }
     ],
   },

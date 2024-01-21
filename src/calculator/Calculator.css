@@ -43,3 +43,7 @@
   button:hover {
     background-color: #2980b9;
   }
+
+  centerbox {
+    margin: 0 auto;
+  }
