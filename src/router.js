@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import DetailBookPage from "./pages/admin/books/BookDetailsPage";
 import Calculator from "./calculator";
 import ColorBox from "./colorGradient";
+import Game from "./tictactoe";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "colorgradient",
         Component: ColorBox,
+      },
+      {
+        path: "tictactoe",
+        Component: Game,
       }
     ],
   },
