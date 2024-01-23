@@ -73,9 +73,9 @@ const Konten = () => {
           </p>
         </Link>
 
-        <a
+        <Link
           className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
+          to="/todo"
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
@@ -90,7 +90,7 @@ const Konten = () => {
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             January 15, 2024
           </p>
-        </a>
+        </Link>
 
         <a
           className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"

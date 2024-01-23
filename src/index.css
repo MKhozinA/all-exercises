@@ -14,4 +14,8 @@
     @apply text-black;
   }
 
+  .toast-body {
+    font-size: 14px; /* Sesuaikan ukuran font dengan preferensi Anda */
+    line-height: 1.4;
+  }
   

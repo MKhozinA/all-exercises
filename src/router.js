@@ -14,6 +14,7 @@ import DetailBookPage from "./pages/admin/books/BookDetailsPage";
 import Calculator from "./calculator";
 import ColorBox from "./colorGradient";
 import Game from "./tictactoe";
+import Todo from "./todo";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "tictactoe",
         Component: Game,
+      },
+      {
+        path: "todo",
+        Component: Todo,
       }
     ],
   },
