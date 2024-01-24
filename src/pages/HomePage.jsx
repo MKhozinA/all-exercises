@@ -1,4 +1,4 @@
-import Konten from '../components/layouts/content/Content';
+import Konten from '../components/content/Content';
 import { useDocumentTitle } from '../hooks'
 
 const HomePage = () => {

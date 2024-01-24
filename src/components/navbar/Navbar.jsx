@@ -8,7 +8,7 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
-    { label: 'Books', path: '/books' }
+    { label: 'Contact', path: '/contact' }
   ]
 
   isAuthenticated
