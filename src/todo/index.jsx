@@ -78,7 +78,7 @@ const Todo = () => {
   }, [todos, setTodos]);
 
   return (
-    <>
+    <div className="w-full md:w-1/3 mx-auto bg-gray-200 p-4">
       <div className="flex justify-between">
         <div
           className="flex w-full h-2 bg-gray-400 rounded-full overflow-hidden relative top-[5px] grow"
@@ -181,7 +181,7 @@ const Todo = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

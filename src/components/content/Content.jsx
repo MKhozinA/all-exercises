@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import img1 from "./img1.png";
 import img2 from "./img2.png";
 import img3 from "./img3.png";
+import img4 from "./img4.png";
 
 const Konten = () => {
   return (
@@ -22,7 +23,7 @@ const Konten = () => {
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
-              className="w-full object-cover rounded-xl"
+              className="w-full object-cover rounded-xl border border-gray-300"
               src={img1}
               alt="Image Description"
             />
@@ -41,7 +42,7 @@ const Konten = () => {
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
-              className="w-full object-cover rounded-xl"
+              className="w-full object-cover rounded-xl border border-gray-300"
               src={img2}
               alt="Image Description"
             />
@@ -60,7 +61,7 @@ const Konten = () => {
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
-              className="w-full object-cover rounded-xl"
+              className="w-full object-cover rounded-xl border border-gray-300"
               src={img3}
               alt="Image Description"
             />
@@ -79,8 +80,8 @@ const Konten = () => {
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
-              className="w-full object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+              className="w-full object-cover rounded-xl border border-gray-300"
+              src={img4}
               alt="Image Description"
             />
           </div>
@@ -88,7 +89,7 @@ const Konten = () => {
             Todo List
           </h3>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            January 15, 2024
+            January 25, 2024
           </p>
         </Link>
 

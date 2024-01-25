@@ -5,9 +5,9 @@ const TicTacToePage = () => {
   useDocumentTitle("Tic-Tac-Toe");
 
   return (
-    <>
+    <div>
       <Game />
-    </>
+    </div>
   );
 };
 

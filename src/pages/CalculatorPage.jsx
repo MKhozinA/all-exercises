@@ -5,9 +5,9 @@ const CalculatorPage = () => {
   useDocumentTitle("Calculator");
 
   return (
-    <>
+    <div>
       <Calculator />
-    </>
+    </div>
   );
 };
 

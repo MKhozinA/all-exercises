@@ -5,9 +5,9 @@ const ColorGradientPage = () => {
   useDocumentTitle("Color Gradient");
 
   return (
-    <>
+    <div>
       <ColorBox />
-    </>
+    </div>
   );
 };
 
