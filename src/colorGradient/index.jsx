@@ -31,7 +31,7 @@ function ColorBox() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: "100vh",
+       marginTop: "50px"
       }}
     >
       <div style={{ display: "flex" }}>

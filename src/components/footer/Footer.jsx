@@ -9,6 +9,7 @@ const Footer = () => {
               href="https://github.com/MKhozinA/all-exercises"
               target="_blank"
               rel="noopener noreferrer"
+              title="Learn more" aria-label="My Github"
             >
               <svg
                 className="flex-shrink-0 w-3.5 h-3.5"

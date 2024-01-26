@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    setUser({ name: 'Username' })
+    setUser({ name: 'User' })
   }, [])
 
   const login = (user) => {

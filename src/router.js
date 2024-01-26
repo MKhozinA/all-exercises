@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
 import NotFound from "./pages/errors/NotFound";
-import Calculator from "./calculator";
-import ColorBox from "./colorGradient";
-import Game from "./tictactoe";
-import Todo from "./todo";
 import ContactPage from "./pages/ContactPage";
 import App from './App'
+import AboutPage from "./pages/AboutPage";
+import CalculatorPage from "./pages/CalculatorPage";
+import ColorGradientPage from "./pages/ColorGradientPage";
+import TicTacToePage from "./pages/TicTacToePage";
+import TodoPage from "./pages/TodoPage";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        Component: Home,
+        Component: HomePage,
       },
       {
         path: "about",
-        Component: About,
+        Component: AboutPage,
       },
       {
         path: "contact",
@@ -28,19 +28,19 @@ const router = createBrowserRouter([
       },
       {
         path: "calculator",
-        Component: Calculator,
+        Component: CalculatorPage,
       },
       {
         path: "colorgradient",
-        Component: ColorBox,
+        Component: ColorGradientPage,
       },
       {
         path: "tictactoe",
-        Component: Game,
+        Component: TicTacToePage,
       },
       {
         path: "todo",
-        Component: Todo,
+        Component: TodoPage,
       }
     ],
   },

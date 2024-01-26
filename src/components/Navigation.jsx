@@ -1,76 +1,84 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
-import { LocaleContext } from "../LocaleContext";
 
 const Navigation = () => {
   const { user, login, logout } = useContext(AuthContext);
-  const { locale, toggleLocale } = useContext(LocaleContext);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const location = useLocation();
 
   const [links] = useState([
     { name: "Home", path: "/" },
-    { name: "About", path: "about" },
-    { name: "Contact", path: "contact" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ]);
 
   const doLogin = (e) => {
     e.preventDefault();
-    login({ name: "John Doe" });
+    login({ name: "User" });
+    setDropdownVisible(false);
   };
 
   const doLogout = (e) => {
     e.preventDefault();
     logout();
+    setDropdownVisible(false);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
   };
 
   return (
-    <nav className="bg-slate-100 max-w-2xl mx-auto my-4 p-4 rounded flex content-between">
-      <div className="font-bold">App Name </div>
-      <div className="block text-right grow">
-        {links.map((link) => (
-          <div key={link.name} className="inline-block ml-2">
+    <header className="flex flex-wrap justify-between items-center py-4 bg-white text-lg sm:text-sm dark:bg-gray-800">
+      <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-col sm:flex-row items-center justify-between" aria-label="Global">
+        <Link to="/" className="flex-none text-xl font-semibold dark:text-white mb-2 sm:mb-0">Khozin</Link>
+        <div className="flex items-center gap-5 mt-5 sm:mt-0 sm:ps-5 sm:flex-nowrap">
+          {links.map((link) => (
             <Link
+              key={link.name}
               to={link.path}
-              className="py-1 px-2 hover:bg-slate-200 rounded"
+              className={`font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 ${
+                location.pathname === link.path ? "border-b-2 border-blue-700" : ""
+              }`}
             >
               {link.name}
             </Link>
-          </div>
-        ))}
-        <div className="inline-block ml-2">
-          <button
-            onClick={toggleLocale}
-            className="py-1 px-2 hover:bg-slate-200 rounded"
-          >
-            {locale}
-          </button>
-        </div>
-        <div className="inline-block ml-2">
-          {user ? (
-            <>
-              <a href="#" className="py-1 px-2 hover:bg-slate-200 rounded">
-                {user.name}
-              </a>
+          ))}
+          <div className="relative ml-auto flex items-center">
+            {user ? (
+              <>
+                <button
+                  onClick={toggleDropdown}
+                  className="flex items-center font-medium text-blue-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                >
+                  <span className="mr-2">{user.name}</span>
+                  <span>&#9662;</span>
+                </button>
+                {dropdownVisible && (
+                  <div className="absolute top-full right-0 bg-white border rounded mt-2 shadow-md">
+                    <button
+                      onClick={doLogout}
+                      className="block py-2 px-4 hover:bg-gray-200 rounded"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </>
+            ) : (
               <a
                 href="#"
-                onClick={doLogout}
-                className="py-1 px-2 hover:bg-slate-200 rounded"
+                onClick={doLogin}
+                className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
-                Logout
+                Login
               </a>
-            </>
-          ) : (
-            <a
-              href="#"
-              onClick={doLogin}
-              className="py-1 px-2 hover:bg-slate-200 rounded"
-            >
-              Login
-            </a>
-          )}
+            )}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
