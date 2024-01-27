@@ -8,6 +8,7 @@ import ColorGradientPage from "./pages/ColorGradientPage";
 import TicTacToePage from "./pages/TicTacToePage";
 import TodoPage from "./pages/TodoPage";
 import HomePage from "./pages/HomePage";
+import QuizPage from "./pages/QuizPage";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "todo",
         Component: TodoPage,
+      },
+      {
+        path: "quiz",
+        Component: QuizPage,
       }
     ],
   },

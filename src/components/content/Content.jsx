@@ -3,6 +3,7 @@ import img1 from "./img1.png";
 import img2 from "./img2.png";
 import img3 from "./img3.png";
 import img4 from "./img4.png";
+import img5 from "./img5.png";
 
 const Konten = () => {
   return (
@@ -12,7 +13,7 @@ const Konten = () => {
           All My Mini Project
         </h2>
         <p className="mt-1 text-gray-600 dark:text-gray-400">
-          This is a documentation of various simple exercises
+          This is a documentation of my simple exercises
         </p>
       </div>
 
@@ -93,24 +94,24 @@ const Konten = () => {
           </p>
         </Link>
 
-        <a
+        <Link
           className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
+          to="/quiz"
         >
           <div className="aspect-w-16 aspect-h-9">
             <img
-              className="w-full object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+              className="w-full object-cover rounded-xl border border-gray-300"
+              src={img5}
               alt="Image Description"
             />
           </div>
           <h3 className="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
-            Book List
+            Simple Quiz
           </h3>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            January 15, 2024
+            January 27, 2024
           </p>
-        </a>
+        </Link>
       </div>
     </div>
   );
