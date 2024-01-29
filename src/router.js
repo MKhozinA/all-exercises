@@ -9,6 +9,8 @@ import TicTacToePage from "./pages/TicTacToePage";
 import TodoPage from "./pages/TodoPage";
 import HomePage from "./pages/HomePage";
 import QuizPage from "./pages/QuizPage";
+import BooksPage from "./pages/BooksPage";
+import BookDetailsPage from "./pages/DetailBookPage";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +48,20 @@ const router = createBrowserRouter([
       {
         path: "quiz",
         Component: QuizPage,
-      }
+      },
+      {
+        path: 'books',
+        children: [
+          {
+            path: '',
+            Component: BooksPage,
+          },
+          {
+            path: ':id',
+            Component: BookDetailsPage,
+          },
+        ],
+      },
     ],
   },
 

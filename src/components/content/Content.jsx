@@ -4,6 +4,7 @@ import img2 from "./img2.png";
 import img3 from "./img3.png";
 import img4 from "./img4.png";
 import img5 from "./img5.png";
+import img6 from "./img6.png";
 
 const Konten = () => {
   return (
@@ -110,6 +111,25 @@ const Konten = () => {
           </h3>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             January 27, 2024
+          </p>
+        </Link>
+
+        <Link
+          className="group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+          to="/books"
+        >
+          <div className="aspect-w-16 aspect-h-9">
+            <img
+              className="w-full object-cover rounded-xl border border-gray-300"
+              src={img6}
+              alt="Image Description"
+            />
+          </div>
+          <h3 className="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+            Book List
+          </h3>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            January 29, 2024
           </p>
         </Link>
       </div>

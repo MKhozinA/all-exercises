@@ -67,7 +67,7 @@ const Todo = () => {
 
   const deleteTodo = (index) => {
     if (confirm("Are you sure you want to delete this todo?")) {
-      setTodos(todos.filter((todo, i) => i !== index));
+      setTodos(todos.filter((todo) => todo.id !== index));
       toast.error("Todo deleted");
     }
   };
@@ -143,7 +143,7 @@ const Todo = () => {
 
             <button
               type="button"
-              onClick={() => deleteTodo(index)}
+              onClick={() => deleteTodo(todo.id)}
               className="text-sm text-red-600 p-1"
             >
               <Trash2 size={14} />
@@ -173,7 +173,7 @@ const Todo = () => {
 
             <button
               type="button"
-              onClick={() => deleteTodo(index)}
+              onClick={() => deleteTodo(todo.id)}
               className="text-sm text-red-600 p-1"
             >
               <Trash2 size={14} />
